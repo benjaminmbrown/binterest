@@ -1,0 +1,27 @@
+$baseFontFamily: Oxygen;
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+$btnPrimaryBackground: purple;
+
+@import "bootstrap";
+
+
+@import "bootstrap-responsive";
+body {
+	padding-top: 10px;
+}
+
+
+
+.navbar-inner{
+    @include box-shadow(none !important);
+    border: 0;
+}
+
+.footer{
+    margin-top: 50px;
+    color: $grayLight;
+    a{
+        color: $gray;
+    }
+}
