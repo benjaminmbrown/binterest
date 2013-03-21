@@ -1,15 +1,21 @@
+<% if user_signed_in? %>
 
 <div class="hero-unit">
+    	<h1>Hi <%= :name %></h1>
+			<p>Bin some stuff now yo!</p>
+			
+</div>
+<% else %>
 
+
+<div class="hero-unit">
     	<h1>Welcome to Binterest</h1>
 			<p>Start Binning stuff now!</p>
-			<P><% link_to "Sign up now!","#" %></p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 
-		<p>
-	  <%= link_to "Sign Up Now!", "hi", class: "btn btn-primary btn-large" %>
-	</p>
+	
 	
 </div>
 
-
+<% end %>
 

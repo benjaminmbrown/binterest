@@ -1,6 +1,6 @@
 $baseFontFamily: Oxygen;
-$navbarBackgroundHighlight: white;
-$navbarBackground: white;
+/*$navbarBackgroundHighlight: white;*/
+/*$navbarBackground: white;*/
 $btnPrimaryBackground: purple;
 
 @import "bootstrap";
@@ -8,7 +8,7 @@ $btnPrimaryBackground: purple;
 
 @import "bootstrap-responsive";
 body {
-	padding-top: 10px;
+	padding-top: 60px;
 }
 
 
