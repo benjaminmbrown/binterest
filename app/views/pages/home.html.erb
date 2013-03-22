@@ -3,8 +3,13 @@
 <div class="hero-unit">
     	<h1>Hi <%= current_user.name %></h1>
 			<p>Bin some stuff now yo!</p>
-			
+			<% @users = User.all %>
+			<% @users.each do |user| %>
+  			<%= user.email %><br/>
+			<% end %>
 </div>
+
+
 <% else %>
 
 
@@ -13,12 +18,11 @@
 			<p>Start Binning stuff now!</p>
 			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 <h3>Check out all our users</h3>
-<p>
-<% @users.each do |user| %>
-<%= user.name %>
-<% end %>
 
-	</p>
+<% @users = User.all %>
+<% @users.each do |user| %>
+<%= user.name %><br/>
+<% end %>
 	
 	
 </div>
