@@ -1,8 +1,18 @@
-  <tr>
-    <td><%= pin.description %></td>
-    <td><%= link_to 'Show', pin %></td>
+<div class="box">
+	<p><%= link_to (image_tag pin.image(:medium)), pin %></p>
+	<p class="description"><%= pin.description %></p>
+	    <% if current_user == pin.user %>
+		<p><strong>My "bin"!</strong></p>
+		<% else %>
+		<p><strong>'Binned' by <%= pin.user.name %></strong></p>
+		<% end %>
+	<p>
+ 	<%= link_to 'Show', pin %>
     <% if current_user == pin.user %>
-    <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-    <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <p>
+    <%= link_to 'Edit', edit_pin_path(pin) %>
+    <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
     <% end %>
-  </tr>
+</p>
+</div>
