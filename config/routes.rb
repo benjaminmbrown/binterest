@@ -1,9 +1,14 @@
 Binterest::Application.routes.draw do
   
+  get "users/show"
+
+  get "user/show"
+
   resources :pins
 
 
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   root :to => 'pins#index'
   #root :to => 'pages#home'

@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="span6 offset3">
+		<div class="well">
+			<h1> <%= @user.name %></h1>
+			<h2> <%= @user.email %></h2>
+	</div>
+	<h3>Check out their pins</h3>
+	<div id="pins">
+			<%= render @pins %>
+			</div>
+	</div>
+</div>
+<%= will_paginate @pins %>

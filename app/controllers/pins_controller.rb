@@ -5,7 +5,7 @@ before_filter :authenticate_user!, except: [:index]
   def index
     #to only display pins that user has access to 
     #  @pins = current_user.pins.all
-    @pins = Pin.order("created_at desc")
+    @pins = Pin.order("created_at desc").page(params[:page]).per_page(15)
 
     respond_to do |format|
       format.html # index.html.erb

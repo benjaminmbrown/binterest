@@ -4,7 +4,7 @@
 	    <% if current_user == pin.user %>
 		<p><strong>My "bin"!</strong></p>
 		<% else %>
-		<p><strong>'Binned' by <%= pin.user.name %></strong></p>
+		<p><strong>'Binned' by <%= link_to pin.user.name, pin.user %></strong></p>
 		<% end %>
 	<p>
  	<%= link_to 'Show', pin %>
