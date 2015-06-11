@@ -1,2 +1,1 @@
-This is my pinterest recreation
-Based on tutorial by [Mattan Griffel](http://mattangriffel.com)
+This is my pinterest recreation.. see demo: [Binterest Heroku](http://obscure-hollows-3836.herokuapp.com/)
